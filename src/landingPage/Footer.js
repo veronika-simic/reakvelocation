@@ -7,8 +7,10 @@ import veronika from "./veronika.png"
 import bruno from "./bruno.jpeg"
 import Box from "@mui/material/Box"
 import BottomNavigation from "@mui/material/BottomNavigation"
-
+import Typography from "@mui/material/Typography"
 import IconButton from "@mui/material/IconButton"
+
+import "./Footer.css"
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0)
@@ -17,16 +19,26 @@ export default function SimpleBottomNavigation() {
     <Box>
       <BottomNavigation
         sx={{
-          width: '100%',
+          width: "100%",
           height: 70,
           bgcolor: "warning.main",
+          bottom: 0,
+          display: "flex",
+          alignItems: "center",
         }}
-       
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue)
         }}
       >
+        <Typography
+          class="love"
+          color="white"
+          variant="h5"
+          sx={{ marginRight: "30px" }}
+        >
+          Made with love by Akvelon team
+        </Typography>
         <IconButton href={"https://github.com/veronika-simic"}>
           <Avatar alt="Vera" src={veronika} />
         </IconButton>
