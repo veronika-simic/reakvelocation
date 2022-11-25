@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./MexicoPage.css";
 
-const MexicoPage = () => {
+const MexicoPage = ({ locationData, setLocationData }) => {
   return (
     <div className="mexico">
       <div className="mexicoHeader">

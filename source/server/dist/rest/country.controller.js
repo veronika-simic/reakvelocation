@@ -8,7 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a;
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountryController = void 0;
 const common_1 = require("@nestjs/common");
@@ -21,13 +23,23 @@ let CountryController = class CountryController {
     getAllCountries() {
         return this.countryService.getAllCountries();
     }
+    getCountryById(id) {
+        return this.countryService.getCountryById(Number(id));
+    }
 };
 __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
+    __metadata("design:returntype", Promise)
 ], CountryController.prototype, "getAllCountries", null);
+__decorate([
+    common_1.Get(':id'),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], CountryController.prototype, "getCountryById", null);
 CountryController = __decorate([
     common_1.Controller('countries'),
     __metadata("design:paramtypes", [country_service_1.CountryService])

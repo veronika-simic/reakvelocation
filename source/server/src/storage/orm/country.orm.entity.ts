@@ -2,14 +2,14 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class CountryOrmEntity{
+export class CountryOrmEntity {
   @PrimaryGeneratedColumn()
   id: number;
-  
+
   @Column()
   name: string;
-  
-  @Column()
+
+  @Column({ default: 'some country' })
   description: string;
 
   @Column()

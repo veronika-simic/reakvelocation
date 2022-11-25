@@ -22,6 +22,10 @@ __decorate([
     __metadata("design:type", String)
 ], CountryOrmEntity.prototype, "name", void 0);
 __decorate([
+    typeorm_1.Column({ default: 'some country' }),
+    __metadata("design:type", String)
+], CountryOrmEntity.prototype, "description", void 0);
+__decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], CountryOrmEntity.prototype, "picture", void 0);

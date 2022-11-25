@@ -23,6 +23,9 @@ let CountryService = class CountryService {
     getAllCountries() {
         return this.countryRepository.getAllCountries();
     }
+    async getCountryById(id) {
+        return await this.countryRepository.getCountryById(id);
+    }
 };
 CountryService = __decorate([
     common_1.Injectable(),

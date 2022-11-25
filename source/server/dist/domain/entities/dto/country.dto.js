@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountryDto = void 0;
 class CountryDto {
-    constructor(id, name, picture) {
+    constructor(id, name, description, picture) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.picture = picture;
     }
 }

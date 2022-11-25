@@ -4,4 +4,5 @@ export declare class CountryService {
     private readonly countryRepository;
     constructor(countryRepository: CountryRepository);
     getAllCountries(): Promise<CountryDto[]>;
+    getCountryById(id: number): Promise<CountryDto[]>;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Homepage = (dummyDataCroatia, dummyDataMexico, dummyDataSerbia) => {
+const Homepage = ({ locationData, setLocationData }) => {
   return (
     <div>
       <NavLink to={""}>

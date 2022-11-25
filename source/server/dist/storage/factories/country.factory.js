@@ -12,7 +12,7 @@ const country_dto_1 = require("../../domain/entities/dto/country.dto");
 const country_orm_entity_1 = require("../orm/country.orm.entity");
 let CountryFactory = class CountryFactory {
     buildDtoFromOrmEntity(countryOrmEnity) {
-        return new country_dto_1.CountryDto(countryOrmEnity.id, countryOrmEnity.name, countryOrmEnity.picture);
+        return new country_dto_1.CountryDto(countryOrmEnity.id, countryOrmEnity.name, countryOrmEnity.description, countryOrmEnity.picture);
     }
 };
 CountryFactory = __decorate([

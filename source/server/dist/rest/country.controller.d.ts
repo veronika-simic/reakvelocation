@@ -4,4 +4,5 @@ export declare class CountryController {
     private readonly countryService;
     constructor(countryService: CountryService);
     getAllCountries(): Promise<CountryDto[]>;
+    getCountryById(id: string): Promise<CountryDto[]>;
 }

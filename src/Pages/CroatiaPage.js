@@ -1,7 +1,8 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const CroatiaPage = (props) => {
+const CroatiaPage = ({ locationData, setLocationData }) => {
+  console.log(`ovo je location data u croatia Page ${locationData}`);
   return (
     <div>
       <NavLink to={"/"}>
@@ -9,7 +10,7 @@ const CroatiaPage = (props) => {
       </NavLink>
       Zagreb
     </div>
-  )
-}
+  );
+};
 
-export default CroatiaPage
+export default CroatiaPage;

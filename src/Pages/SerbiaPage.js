@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const SerbiaPage = () => {
+const SerbiaPage = ({ locationData, setLocationData }) => {
   return (
     <div>
       <NavLink to={"/"}>

@@ -8,4 +8,5 @@ export declare class CountryStorage implements CountryRepository {
     private readonly countryFactory;
     constructor(countryRepository: Repository<CountryOrmEntity>, countryFactory: CountryFactory);
     getAllCountries(): Promise<CountryDto[]>;
+    getCountryById(id: number): Promise<CountryDto[]>;
 }
