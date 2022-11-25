@@ -21,7 +21,7 @@ export default function SimpleBottomNavigation() {
           height: 70,
           bgcolor: "warning.main",
         }}
-        showLabels
+       
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue)
