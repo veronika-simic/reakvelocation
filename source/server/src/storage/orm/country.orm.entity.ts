@@ -9,7 +9,7 @@ export class CountryOrmEntity{
   @Column()
   name: string;
   
-  @Column()
+  @Column({default: 'some country'})
   description: string;
 
   @Column()
