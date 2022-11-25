@@ -1,7 +1,6 @@
-import Header from "./landingPage/Header";
+import Header from "./landingPage/Header/Header";
 import Card from "./landingPage/Card/Card";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./Pages/Homepage";
 import MexicoPage from "./Pages/MexicoPage";
 import CroatiaPage from "./Pages/CroatiaPage";
 import SerbiaPage from "./Pages/SerbiaPage";

@@ -20,8 +20,8 @@ export default function Card() {
 
   return (
     <div className="cards">
-      {country.length > 0 && country.map((c, index) => <div className={`card card-${index+1}`}>
-        <NavLink key={index} to={"/serbia"} style={{ textDecoration: "none" }}>
+      {country.length > 0 && country.map((c, index) => <div key={index} className={`card card-${index+1}`}>
+        <NavLink  to={"/serbia"} style={{ textDecoration: "none" }}>
           <h3>{c.name}</h3>
           <p className="hidden">Belgrade is the capital of Serbia.</p>
         </NavLink>
