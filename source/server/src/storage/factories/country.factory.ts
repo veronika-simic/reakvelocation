@@ -9,7 +9,8 @@ export class CountryFactory {
     return new CountryDto(
       countryOrmEnity.id,
       countryOrmEnity.name,
-      countryOrmEnity.picture,
+      countryOrmEnity.description,
+      countryOrmEnity.picture
     );
   }
 }
