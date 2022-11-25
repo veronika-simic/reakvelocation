@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 
 export default function Header() {
   return (
-    <AppBar position="static" sx={{ bgcolor: "warning.main" }}>
+    <AppBar className="bg-orange" position="static">
       <Toolbar style={{ height: "100px", alignItems: "center" }} sx={{ justifyContent: 'center' }}>
         <NavLink to={""} style={{ textDecoration: "none", color: "white" }}>
           <Typography variant="h4" component="div" sx={{ justifyContent: 'center' }}>
