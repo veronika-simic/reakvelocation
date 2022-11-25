@@ -8,8 +8,8 @@ export class CountryOrmEntity {
 
   @Column()
   name: string;
-
-  @Column({ default: 'some country' })
+  
+  @Column({default: 'some country'})
   description: string;
 
   @Column()

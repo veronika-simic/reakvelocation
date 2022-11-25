@@ -1,57 +1,32 @@
-import Header from "./landingPage/Header";
-import Card from "./landingPage/Card/Card";
-import Footer from "./landingPage/Footer";
+import Header from "./landingPage/Header"
+import Card from "./landingPage/Card/Card"
+import Footer from "./landingPage/Footer"
+import CountryPage from "./Pages/CountryPage"
+import { Routes, Route } from "react-router-dom"
 
-import { Routes, Route } from "react-router-dom";
-import MexicoPage from "./Pages/MexicoPage";
-import CroatiaPage from "./Pages/CroatiaPage";
-import SerbiaPage from "./Pages/SerbiaPage";
-import NotFoundPage from "./Pages/NotFoundPage";
-import { useState } from "react";
+import NotFoundPage from "./Pages/NotFoundPage"
+import {useEffect, useState} from 'react';
+import {getAllCountries} from './api/api'
 
 function App() {
-  const [locationData, setLocationData] = useState([]);
+  const [countries, setCountries] = useState([])
+  useEffect(() => {
+    const getAllCountriesFromApi = async () => {
+      const response = await getAllCountries()
+      setCountries(response.data)
+    }
+    getAllCountriesFromApi()
+  }, [])
+
   return (
     <div>
       <Header></Header>
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Card
-              locationData={locationData}
-              setLocationData={setLocationData}
-            />
-          }
-        />
-        <Route
-          path="/zagreb"
-          element={
-            <CroatiaPage
-              locationData={locationData}
-              setLocationData={setLocationData}
-            />
-          }
-        />
-        <Route
-          path="/Guadaljararar"
-          element={
-            <MexicoPage
-              locationData={locationData}
-              setLocationData={setLocationData}
-            />
-          }
-        />
-        <Route
-          path="/beograd"
-          element={
-            <SerbiaPage
-              locationData={locationData}
-              setLocationData={setLocationData}
-            />
-          }
-        />
+        <Route path="/" element={<Card countries={countries} />} />
+        
+        {countries.length > 0 && countries.map(country => <Route key={country.id} path={`/${country.name}`} element={<CountryPage country={country}></CountryPage>}></Route>)}
+        
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer></Footer>

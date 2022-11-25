@@ -14,16 +14,14 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0)
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box>
       <BottomNavigation
         sx={{
-          position: "fixed",
-          bottom: 0,
-          width: 1.0,
+          width: '100%',
           height: 70,
           bgcolor: "warning.main",
         }}
-        showLabels
+       
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue)
