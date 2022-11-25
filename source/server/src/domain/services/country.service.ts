@@ -8,4 +8,10 @@ export class CountryService {
 
  getAllCountries(): Promise<CountryDto[]> {
       return this.countryRepository.getAllCountries();
-}}
+
+      
+}
+ async getCountryById(id: number): Promise<CountryDto[]> {
+    return await this.countryRepository.getCountryById(id);
+  }
+}
