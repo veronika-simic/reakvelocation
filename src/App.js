@@ -3,6 +3,7 @@ import Homepage from "./Pages/Homepage";
 import CroatiaPage from "./Pages/CroatiaPage";
 import SerbiaPage from "./Pages/SerbiaPage";
 import MexicoPage from "./Pages/MexicoPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/Croatia" element={<CroatiaPage />} />
         <Route path="/Mexico" element={<MexicoPage />} />
         <Route path="/Serbia" element={<SerbiaPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
