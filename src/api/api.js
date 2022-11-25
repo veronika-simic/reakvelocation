@@ -5,6 +5,5 @@ const axiosInstance = createAxionsInstance(
 
 export const getAllCountries = async () => {
     const response = await axiosInstance.get('/countries');
-    console.log(response);
     return response;
 };

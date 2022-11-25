@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import "./Card.css";
 import { NavLink } from "react-router-dom";
 import { getAllCountries } from "../../api/api";
@@ -8,29 +9,23 @@ import MexicoPage from "../Pages/MexicoPage";
  */
 
 export default function Card() {
+  const [country, setCountry] = useState([]) 
+  useEffect( () => {
+    const getAllCountriesFromApi = async () => {
+      const response = await getAllCountries();
+      setCountry(response.data)
+    };
+    getAllCountriesFromApi();
+  }, [])
+
   return (
     <div className="cards">
-     
-      <div className="card card-1">
-        <NavLink to={"/serbia"} style={{ textDecoration: "none" }}>
-          <h3>BELGRADE</h3>
+      {country.length > 0 && country.map((c, index) => <div className={`card card-${index+1}`}>
+        <NavLink key={index} to={"/serbia"} style={{ textDecoration: "none" }}>
+          <h3>{c.name}</h3>
           <p className="hidden">Belgrade is the capital of Serbia.</p>
         </NavLink>
-      </div>
-
-      <div className="card card-2">
-        <NavLink to={"/mexico"} style={{ textDecoration: "none" }}>
-          <h3>GUADALAJARA</h3>
-          <p className="hidden">Guadalajara is a city in western Mexico.</p>
-        </NavLink>
-      </div>
-
-      <div className="card card-3">
-        <NavLink to={"/croatia"} style={{ textDecoration: "none" }}>
-          <h3>ZAGREB</h3>
-          <p className="hidden">Zagreb is the capital of Croatia.</p>
-        </NavLink>
-      </div>
+      </div>) }
     </div>
   );
 }
