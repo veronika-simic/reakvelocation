@@ -1,44 +1,24 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+
 import "./Card.css";
 import { NavLink } from "react-router-dom";
-import { getAllCountries } from "../../api/api";
+
 import Banner from "../Banner/Banner";
 import "../Banner/Banner.css";
-/* import CroatiaPage from "../Pages/CroatiaPage";
-import SerbiaPage from "../Pages/SerbiaPage";
-import MexicoPage from "../Pages/MexicoPage";
- */
 
-export default function Card(data) {
-  const [country, setCountry] = useState([]);
-  useEffect(() => {
-    const getAllCountriesFromApi = async () => {
-      const response = await getAllCountries();
-      setCountry(response.data);
-    };
-    getAllCountriesFromApi();
-  }, []);
-
+export default function Card({ countries }) {
   return (
-    <>
-     <Banner></Banner>
-      <div className="cards">
-       
-        {country.length > 0 &&
-          country.map((c, index) => (
-            <div className={`card card-${index + 1}`}>
-              <NavLink
-                key={index}
-                to={"/serbia"}
-                style={{ textDecoration: "none" }}
-              >
-                <h3>{c.name}</h3>
-                <p className="hidden">Belgrade is the capital of Serbia.</p>
-              </NavLink>
-            </div>
-          ))}
-      </div>
-    </>
+    <div className="cards">
+      <Banner></Banner>
+      {countries.length > 0 &&
+        countries.map((c, index) => (
+          <div key={index} className={`card card-${index + 1}`}>
+            <NavLink to={`/${c.name}`} style={{ textDecoration: "none" }}>
+              <h3>{c.name}</h3>
+              <p className="hidden">Belgrade is the capital of Serbia.</p>
+            </NavLink>
+          </div>
+        ))}
+    </div>
   );
 }
