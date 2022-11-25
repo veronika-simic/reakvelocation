@@ -1,29 +1,30 @@
-import * as React from "react"
-import { useState, useEffect } from "react"
-import "./Card.css"
-import { NavLink } from "react-router-dom"
-import { getAllCountries } from "../../api/api"
-import Banner from "../Banner/Banner"
-import "../Banner/Banner.css"
+import * as React from "react";
+import { useState, useEffect } from "react";
+import "./Card.css";
+import { NavLink } from "react-router-dom";
+import { getAllCountries } from "../../api/api";
+import Banner from "../Banner/Banner";
+import "../Banner/Banner.css";
 /* import CroatiaPage from "../Pages/CroatiaPage";
 import SerbiaPage from "../Pages/SerbiaPage";
 import MexicoPage from "../Pages/MexicoPage";
  */
 
 export default function Card(data) {
-  const [country, setCountry] = useState([])
+  const [country, setCountry] = useState([]);
   useEffect(() => {
     const getAllCountriesFromApi = async () => {
-      const response = await getAllCountries()
-      setCountry(response.data)
-    }
-    getAllCountriesFromApi()
-  }, [])
+      const response = await getAllCountries();
+      setCountry(response.data);
+    };
+    getAllCountriesFromApi();
+  }, []);
 
   return (
-    <div className="cards">
-      <>
-        <Banner></Banner>
+    <>
+     <Banner></Banner>
+      <div className="cards">
+       
         {country.length > 0 &&
           country.map((c, index) => (
             <div className={`card card-${index + 1}`}>
@@ -37,7 +38,7 @@ export default function Card(data) {
               </NavLink>
             </div>
           ))}
-      </>
-    </div>
-  )
+      </div>
+    </>
+  );
 }
