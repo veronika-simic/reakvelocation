@@ -1,10 +1,6 @@
 import * as React from "react";
 import "./Card.css";
 import { NavLink } from "react-router-dom";
-/* import CroatiaPage from "../Pages/CroatiaPage";
-import SerbiaPage from "../Pages/SerbiaPage";
-import MexicoPage from "../Pages/MexicoPage";
- */
 
 export default function Card() {
   return (
