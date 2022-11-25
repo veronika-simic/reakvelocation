@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    env_file:
+      - ./source/server/.env
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=reakvelocation
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8000:8080'
+    links:
+      - db

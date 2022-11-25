@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
+import image from './akvecrop.jpg'
 
 // importing material UI components
 import AppBar from "@mui/material/AppBar";
@@ -13,7 +14,7 @@ export default function Header() {
       <Toolbar style={{ height: "100px", alignItems: "center" }} sx={{ justifyContent: 'center' }}>
         <NavLink to={""} style={{ textDecoration: "none", color: "white" }}>
           <Typography variant="h4" component="div" sx={{ justifyContent: 'center' }}>
-            REAKVELOCATION
+          <img src={image} alt="bla"></img>
           </Typography>
         </NavLink>
       </Toolbar>
