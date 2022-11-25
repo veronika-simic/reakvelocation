@@ -10,5 +10,8 @@ export class CountryOrmEntity{
   name: string;
   
   @Column()
+  description: string;
+
+  @Column()
   picture: string;
 }

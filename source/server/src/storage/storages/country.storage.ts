@@ -18,4 +18,9 @@ export class CountryStorage implements CountryRepository {
     const countryOrmEntity = await this.countryRepository.find();
     return countryOrmEntity.map(entity => this.countryFactory.buildDtoFromOrmEntity(entity));
   }
+
+   async getCountryById(id: number): Promise<CountryDto[]> {
+    const countryOrmEntity = await this.countryRepository.find({id: id});
+    return await Promise.all(countryOrmEntity.map(country => this.countryFactory.buildDtoFromOrmEntity(country)));
+  }
 }
