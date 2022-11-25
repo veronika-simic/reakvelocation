@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./Pages/Homepage";
+import CroatiaPage from "./Pages/CroatiaPage";
+import SerbiaPage from "./Pages/SerbiaPage";
+import MexicoPage from "./Pages/MexicoPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Croatia" element={<CroatiaPage />} />
+        <Route path="/Mexico" element={<MexicoPage />} />
+        <Route path="/Serbia" element={<SerbiaPage />} />
+      </Routes>
     </div>
   );
 }
