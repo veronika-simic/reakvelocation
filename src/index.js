@@ -1,4 +1,5 @@
-import "./index.css";
+import "./styles/reset.css";
+import "./styles/typography.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 

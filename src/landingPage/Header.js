@@ -10,9 +10,9 @@ import Typography from "@mui/material/Typography";
 export default function Header() {
   return (
     <AppBar position="static" sx={{ bgcolor: "warning.main" }}>
-      <Toolbar style={{ height: "100px" }}>
-        <NavLink to={""} style={{ textDecoration: "none" }}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+      <Toolbar style={{ height: "100px", alignItems: "center" }} sx={{ justifyContent: 'center' }}>
+        <NavLink to={""} style={{ textDecoration: "none", color: "white" }}>
+          <Typography variant="h4" component="div" sx={{ justifyContent: 'center' }}>
             REAKVELOCATION
           </Typography>
         </NavLink>
