@@ -1,14 +1,13 @@
-import Header from "./landingPage/Header"
-import Card from "./landingPage/Card"
-import Footer from "./landingPage/Footer"
+import Header from "./landingPage/Header";
+import Card from "./landingPage/Card";
+import Footer from "./landingPage/Footer";
 
-import { Routes, Route } from "react-router-dom"
-import Homepage from "./Pages/Homepage"
-import MexicoPage from "./Pages/MexicoPage"
-import CroatiaPage from "./Pages/CroatiaPage"
-import SerbiaPage from "./Pages/SerbiaPage"
-import NotFoundPage from "./Pages/NotFoundPage"
-import Banner from "./landingPage/Banner/Banner"
+import { Routes, Route } from "react-router-dom";
+import MexicoPage from "./Pages/MexicoPage";
+import CroatiaPage from "./Pages/CroatiaPage";
+import SerbiaPage from "./Pages/SerbiaPage";
+import NotFoundPage from "./Pages/NotFoundPage";
+import Banner from "./landingPage/Banner/Banner";
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
       </Routes>
       <Footer></Footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
