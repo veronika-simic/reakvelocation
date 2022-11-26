@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./CountryPage.css";
 
 function CountryPage({ country, category }) {
   const dataobj = {
@@ -36,17 +37,16 @@ function CountryPage({ country, category }) {
     if (country.name.includes(cat.name)) {
       return (
         <div>
-          <div className="countryName">{country.name}</div>
-          <div className="countryDescription">{country.description}</div>
+          <div className="name container">
+            <p className="cityName">{cat.name}</p>
+          </div>
 
-          <div className="imageRow">
-            <div className="image">
-              <img
-                src={`${cat.picture}`}
-                alt="This is an alt to remove linter"
-              />
-            </div>
-            <div className="imageDescription">{cat.description}</div>
+          <div className="dataContainer">
+            <div>{cat.description}</div>
+          </div>
+
+          <div className="img">
+            <img src="ablacsd" />
           </div>
         </div>
       );
@@ -55,7 +55,7 @@ function CountryPage({ country, category }) {
 
   console.log(country);
   return (
-    <div>
+    <div className="country">
       <div className="countryName">{country.name}</div>
       <div className="countryDescription">{country.description}</div>
 
@@ -64,6 +64,7 @@ function CountryPage({ country, category }) {
           <img
             src={`${dataobj.croatia.foodPicture}`}
             alt="This is an alt to remove linter"
+            className="img"
           />
         </div>
         <div className="imageDescription">
@@ -76,6 +77,7 @@ function CountryPage({ country, category }) {
           <img
             src={`${dataobj.croatia.officePicture}`}
             alt="This is an alt to remove linter"
+            className="img"
           />
         </div>
         <div className="imageDescription">
@@ -88,6 +90,7 @@ function CountryPage({ country, category }) {
           <img
             src={`${dataobj.croatia.lifePicture}`}
             alt="This is an alt to remove linter"
+            className="img"
           />
         </div>
         <div className="imageDescription">
