@@ -55,28 +55,46 @@ function CountryPage({ country, category }) {
 
   console.log(country);
   return (
-    <>
-      {category
-        .filter((cat) => country.name.includes(cat.name))
-        .map((c) => {
-          return (
-            <div>
-              <div className="countryName">{country.name}</div>
-              <div className="countryDescription">{country.description}</div>
+    <div>
+      <div className="countryName">{country.name}</div>
+      <div className="countryDescription">{country.description}</div>
 
-              <div className="imageRow">
-                <div className="image">
-                  <img
-                    src={`${c.picture}`}
-                    alt="This is an alt to remove linter"
-                  />
-                </div>
-                <div className="imageDescription">{c.description}</div>
-              </div>
-            </div>
-          );
-        })}
-    </>
+      <div className="imageRow">
+        <div className="image">
+          <img
+            src={`${dataobj.croatia.foodPicture}`}
+            alt="This is an alt to remove linter"
+          />
+        </div>
+        <div className="imageDescription">
+          {dataobj.croatia.foodDescription}
+        </div>
+      </div>
+
+      <div className="imageRow">
+        <div className="image">
+          <img
+            src={`${dataobj.croatia.officePicture}`}
+            alt="This is an alt to remove linter"
+          />
+        </div>
+        <div className="imageDescription">
+          {dataobj.croatia.officeDescription}
+        </div>
+      </div>
+
+      <div className="imageRow">
+        <div className="image">
+          <img
+            src={`${dataobj.croatia.lifePicture}`}
+            alt="This is an alt to remove linter"
+          />
+        </div>
+        <div className="imageDescription">
+          {dataobj.croatia.lifeDescription}
+        </div>
+      </div>
+    </div>
   );
 }
 
