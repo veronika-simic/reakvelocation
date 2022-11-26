@@ -23,7 +23,7 @@ function CountryPage({ country, category }) {
         "Apartment per month: 45m2 600€ rent+ 100€ water/electricity, check https://www.njuskalo.hr;  Food in restaurants: 10€ per meal; Drink in bars: 3€ beer, 4€ wine, 6€ cocktails; Cigars: round 5€; Gasoline: 2€/L;",
 
       lifePicture:
-        "https://www.journal.hr/wp-content/uploads/2021/01/Wespa-spaces_coworking_naslovna.jpg",
+        "https://www.evadinaricaproject.com/wp-content/uploads/2019/03/img_20190322_182029105_hdr-011865919890-1024x576.jpg",
       lifeTitle: "Our office & working visa info",
     },
     serbia: {},
