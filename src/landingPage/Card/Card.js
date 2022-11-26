@@ -20,6 +20,7 @@ export default function Card({ countries }) {
       );
     }
   };
+
   return (
     <>
       <Banner></Banner>
