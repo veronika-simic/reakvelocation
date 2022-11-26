@@ -1,0 +1,13 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.countryName {
+  margin: 40px;
+  font-size: 40px;
+}
