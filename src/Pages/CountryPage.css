@@ -1,0 +1,49 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.countryName {
+  margin: 40px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageRow {
+  display: flex;
+  flex-direction: row;
+  justfiy-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  justfiy-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.imageDescription {
+  display: flex;
+  flex-direction: row;
+  justfiy-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.img {
+  height: 200px;
+  width: 300px;
+}
