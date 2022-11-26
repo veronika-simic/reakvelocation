@@ -15,7 +15,7 @@ export default function Card({ countries }) {
     } else {
       return (
         <p className="hidden">
-          {c.name} is the one ofthe largest cities in Mexico.
+          Guadalajara is the one ofthe largest cities in Mexico.
         </p>
       );
     }
