@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from "react"
 
-import "./Card.css";
-import { NavLink } from "react-router-dom";
+import "./Card.css"
+import { NavLink } from "react-router-dom"
 
-import Banner from "../Banner/Banner";
-import "../Banner/Banner.css";
+import Banner from "../Banner/Banner"
+import "../Banner/Banner.css"
 
 export default function Card({ countries }) {
   return (
@@ -22,5 +22,5 @@ export default function Card({ countries }) {
           ))}
       </div>
     </>
-  );
+  )
 }
